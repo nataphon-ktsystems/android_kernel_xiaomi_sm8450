@@ -202,10 +202,10 @@ enum xm_property_id {
 	XM_PROP_INPUT_SUSPEND,
 	XM_PROP_FASTCHGMODE,
 	XM_PROP_NIGHT_CHARGING,
-#ifndef CONFIG_MI_CHARGER_M81
+/* Zeus OS3 firmware keeps these protocol slots with MI_CHARGER_M81.
+	 * Omitting them shifts SOC/charge-type/power/temperature IDs by two. */
 	XM_PROP_BLANK_STATUS,
 	XM_PROP_SCREEN_CCTOG,
-#endif /* !CONFIG_MI_CHARGER_M81 */
 	XM_PROP_SOC_DECIMAL,
 	XM_PROP_SOC_DECIMAL_RATE,
 	XM_PROP_QUICK_CHARGE_TYPE,
